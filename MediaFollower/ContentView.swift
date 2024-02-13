@@ -29,6 +29,26 @@ struct ContentView: View {
                 .font(.system(size: 80, weight: .light))
                 .padding(40)
             
+            VStack {
+                
+                //Seguir ---
+                Button{} label: {
+                    Label("follow", systemImage: "person.crop.circle.fill.badge.plus")
+                        .font(.title3)
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+                
+                //Enviar Mensagem ---
+                Button{} label: {
+                    Label("enviar mensagem", systemImage: "paperplane.fill")
+                        .font(.title3)
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+            }
             
         }
     }
