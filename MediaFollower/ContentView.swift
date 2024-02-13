@@ -48,8 +48,9 @@ struct ContentView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
+                .disabled(true)
             }
-            
+            .padding(20)
         }
     }
 }
