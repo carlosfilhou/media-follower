@@ -7,25 +7,40 @@
 
 import SwiftUI
 
+//Modelando um tipo usuário e as propriedades desse novo tipo serão os dados ---
+struct User {
+    var picture: String
+    var name: String
+    var nick: String
+    var followers: Double
+}
+
 struct ContentView: View {
+    
+    //Uma propriedade usuário1 que vai ser do tipo de dado modelado la em cima ---
+    var user1 = User(picture: "profile",
+                     name: "Carlos Augusto",
+                     nick: "@carlosfilhou",
+                     followers: 23643)
+    
     var body: some View {
         
         VStack {
             
             //Perfil ---
-            Image("profile")
+            Image(user1.picture)
                 .resizable()
                 .frame(width: 250, height: 250)
                 .padding(.bottom, 10)
             
-            Text("Carlos Augusto")
+            Text(user1.name)
                 .font(.system(size: 45, weight: .bold))
             
-            Text("@carlosfilhou")
+            Text(user1.nick)
                 .font(.system(size: 23, weight: .regular))
                 .foregroundColor(.gray)
             
-            Text("23.643K")
+            Text("\(user1.followers)")
                 .font(.system(size: 80, weight: .light))
                 .padding(40)
             
@@ -39,6 +54,7 @@ struct ContentView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
+                .accentColor(.indigo)
                 
                 //Enviar Mensagem ---
                 Button{} label: {
