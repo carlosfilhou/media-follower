@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//MARK: - MODEL
+
 //Modelando um tipo usuário e as propriedades desse novo tipo serão os dados ---
 struct User {
     var picture: String
@@ -15,32 +17,40 @@ struct User {
     var followers: Double
 }
 
-struct ContentView: View {
+
+//MARK: - VIEWMODEL
+struct ContentViewModel {
     
     //Uma propriedade usuário1 que vai ser do tipo de dado modelado la em cima ---
     var user1 = User(picture: "profile",
                      name: "Carlos Augusto",
                      nick: "@carlosfilhou",
                      followers: 23643)
+}
+
+
+//MARK: - VIEW
+struct ContentView: View {
+    var viewModel = ContentViewModel()
     
     var body: some View {
         
         VStack {
             
             //Perfil ---
-            Image(user1.picture)
+            Image(viewModel.user1.picture)
                 .resizable()
                 .frame(width: 250, height: 250)
                 .padding(.bottom, 10)
             
-            Text(user1.name)
+            Text(viewModel.user1.name)
                 .font(.system(size: 45, weight: .bold))
             
-            Text(user1.nick)
-                .font(.system(size: 23, weight: .regular))
+            Text(viewModel.user1.nick)
+                .font(.system(size : 23, weight: .regular))
                 .foregroundColor(.gray)
             
-            Text("\(user1.followers)")
+            Text("\(viewModel.user1.followers)")
                 .font(.system(size: 80, weight: .light))
                 .padding(40)
             
