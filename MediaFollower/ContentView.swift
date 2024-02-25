@@ -19,7 +19,7 @@ struct User {
 
 
 //MARK: - VIEWMODEL
-struct ContentViewModel {
+struct ProfileViewModel {
     
     //Uma propriedade usuário1 que vai ser do tipo de dado modelado la em cima ---
     var user1 = User(picture: "profile",
@@ -30,8 +30,8 @@ struct ContentViewModel {
 
 
 //MARK: - VIEW
-struct ContentView: View {
-    var viewModel = ContentViewModel()
+struct ProfileView: View {
+    var viewModel = ProfileViewModel()
     
     var body: some View {
         
@@ -82,5 +82,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ProfileView()
 }
