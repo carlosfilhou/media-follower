@@ -7,26 +7,6 @@
 
 import SwiftUI
 
-//MARK: - MODEL
-
-//Modelando um tipo usuário e as propriedades desse novo tipo serão os dados ---
-struct User {
-    var picture: String
-    var name: String
-    var nick: String
-    var followers: Double
-}
-
-
-//MARK: - VIEWMODEL
-struct ProfileViewModel {
-    
-    //Uma propriedade usuário1 que vai ser do tipo de dado modelado la em cima ---
-    var user1 = User(picture: "profile",
-                     name: "Carlos Augusto",
-                     nick: "@carlosfilhou",
-                     followers: 23643)
-}
 
 
 //MARK: - VIEW
