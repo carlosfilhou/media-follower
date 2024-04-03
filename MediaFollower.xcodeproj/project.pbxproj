@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF750A902BA607CC003ADFFB /* ProfielViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF750A8F2BA607CB003ADFFB /* ProfielViewModel.swift */; };
+		DF750A902BA607CC003ADFFB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF750A8F2BA607CB003ADFFB /* ProfileViewModel.swift */; };
 		DF750A922BA60803003ADFFB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF750A912BA60803003ADFFB /* User.swift */; };
 		DFBF6AB52B7A4B9500B6E35E /* MediaFollowerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBF6AB42B7A4B9500B6E35E /* MediaFollowerApp.swift */; };
 		DFBF6AB72B7A4B9500B6E35E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBF6AB62B7A4B9500B6E35E /* ProfileView.swift */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DF750A8F2BA607CB003ADFFB /* ProfielViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfielViewModel.swift; sourceTree = "<group>"; };
+		DF750A8F2BA607CB003ADFFB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DF750A912BA60803003ADFFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DFBF6AB12B7A4B9500B6E35E /* MediaFollower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaFollower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBF6AB42B7A4B9500B6E35E /* MediaFollowerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFollowerApp.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 				DFBF6AB42B7A4B9500B6E35E /* MediaFollowerApp.swift */,
 				DFBF6AB62B7A4B9500B6E35E /* ProfileView.swift */,
 				DF750A912BA60803003ADFFB /* User.swift */,
-				DF750A8F2BA607CB003ADFFB /* ProfielViewModel.swift */,
+				DF750A8F2BA607CB003ADFFB /* ProfileViewModel.swift */,
 				DFBF6AB82B7A4B9700B6E35E /* Assets.xcassets */,
 				DFBF6ABA2B7A4B9700B6E35E /* Preview Content */,
 			);
@@ -145,7 +145,7 @@
 			files = (
 				DF750A922BA60803003ADFFB /* User.swift in Sources */,
 				DFBF6AB72B7A4B9500B6E35E /* ProfileView.swift in Sources */,
-				DF750A902BA607CC003ADFFB /* ProfielViewModel.swift in Sources */,
+				DF750A902BA607CC003ADFFB /* ProfileViewModel.swift in Sources */,
 				DFBF6AB52B7A4B9500B6E35E /* MediaFollowerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

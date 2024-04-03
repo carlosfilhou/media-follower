@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-
-
 //MARK: - VIEW
 struct ProfileView: View {
-    var viewModel = ProfileViewModel()
+    @State var viewModel = ProfileViewModel()
+    
     
     var body: some View {
         
@@ -30,21 +29,22 @@ struct ProfileView: View {
                 .font(.system(size : 23, weight: .regular))
                 .foregroundColor(.gray)
             
-            Text("\(viewModel.user1.followers)")
+            Text(viewModel.userFollowers)
                 .font(.system(size: 80, weight: .light))
-                .padding(40)
+                .padding(viewModel.isFollowing ? 30 : 25)
             
             VStack {
                 
                 //Seguir ---
-                Button{} label: {
-                    Label("follow", systemImage: "person.crop.circle.fill.badge.plus")
+                Button{ viewModel.followToggle() } label: {
+                    Label(!viewModel.isFollowing ? "follow" : "unfollow", systemImage: "person.crop.circle.fill.badge.plus")
                         .font(.title3)
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
                 .accentColor(.indigo)
+                .tint(!viewModel.isFollowing ? .indigo : .black)
                 
                 //Enviar Mensagem ---
                 Button{} label: {
@@ -54,10 +54,12 @@ struct ProfileView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
-                .disabled(true)
+                .accentColor(.indigo)
+                .disabled(!viewModel.isFollowing)
             }
             .padding(20)
         }
+        .animation(.easeInOut, value: viewModel.isFollowing)
     }
 }
 

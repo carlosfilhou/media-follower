@@ -11,8 +11,10 @@ import Foundation
 
 //Modelando um tipo usuário e as propriedades desse novo tipo serão os dados ---
 struct User {
+    
     var picture: String
     var name: String
     var nick: String
     var followers: Double
+    
 }
